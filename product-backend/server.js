@@ -7,13 +7,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(
-  "mongodb+srv://marwa1998bendaoud:b3RFLKZoGXPoaeyY@cluster0.pfv5qhz.mongodb.net/crud?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect("mongodb://new-product-mongo:27017/crud", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 //mongoose.connect("mongodb://localhost:27017/crud");
 

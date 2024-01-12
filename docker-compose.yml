@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  frontend:
+    build:
+      context: ./product-front
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
+  backend:
+    build:
+      context: ./product-backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+
+    depends_on:
+      - new-product-mongo
+
+  new-product-mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  nginx:
+    image: nginx:1.21-alpine # Use a specific version
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      - backend

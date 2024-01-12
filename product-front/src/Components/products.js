@@ -84,6 +84,7 @@ function Products() {
                     <Link
                       to={`/productDetails/${product._id}`}
                       className="btn btn-primary"
+                      data-cy="product-voire-{productId}"
                       style={{ marginRight: "20px" }}
                     >
                       Voire

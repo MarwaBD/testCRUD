@@ -7,7 +7,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost:27017/crud");
+mongoose.connect(
+  "mongodb+srv://marwa1998bendaoud:b3RFLKZoGXPoaeyY@cluster0.pfv5qhz.mongodb.net/crud?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
+
+//mongoose.connect("mongodb://localhost:27017/crud");
 
 app.get("/", (req, res) => {
   ProductModel.find({})
@@ -49,3 +57,5 @@ const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+module.exports = app;

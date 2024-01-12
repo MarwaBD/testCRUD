@@ -34,6 +34,7 @@ function CreateProduct(props) {
               type="text"
               placeholder="Entrez le nom du produit"
               className="form-control"
+              data-cy="product-name-input"
               required
               onChange={(e) => setName(e.target.value)}
             />
@@ -45,6 +46,7 @@ function CreateProduct(props) {
               step="0.01"
               placeholder="Entrez le prix du produit"
               className="form-control"
+              data-cy="product-price-input"
               required
               pattern="[0-9]+(\.[0-9]+)?"
               onChange={(e) => setPrice(e.target.value)}
@@ -57,13 +59,16 @@ function CreateProduct(props) {
               step="0.01"
               placeholder="Entrez la quantité disponible du produit"
               className="form-control"
+              data-cy="product-quantity-input"
               required
               pattern="[0-9]+(\.[0-9]+)?"
               onChange={(e) => setQuantity(e.target.value)}
             />
           </div>
-          <button className="btn btn-success">Valider</button>
-          <Link to="/" className="btn btn-danger">
+          <button className="btn btn-success" data-cy="submit-button">
+            Valider
+          </button>
+          <Link to="/" className="btn btn-danger" data-cy="cancel-button">
             Annuler
           </Link>
         </form>

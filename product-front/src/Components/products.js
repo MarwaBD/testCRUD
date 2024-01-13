@@ -7,7 +7,7 @@ function Products() {
     {
       Nom: "prod1",
       Prix: "500",
-      Quantité: "22",
+      Quantité: "222",
     },
   ]);
 

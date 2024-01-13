@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Products() {
   const [products, setProducts] = useState([
     {
-      Nom: "prod2",
+      Nom: "prod22",
       Prix: "555",
       Quantité: "222",
     },

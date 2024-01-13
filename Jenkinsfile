@@ -22,8 +22,8 @@ pipeline {
             steps {
                 script {
                     // Add commands to run unit tests for the backend
-                    // dir('product-backend') {
-                    //     sh 'npm test'
+                      dir('product-backend') {
+                        sh 'npm test'
                     // }
                 }
             }

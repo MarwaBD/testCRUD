@@ -6,7 +6,7 @@ function Products() {
   const [products, setProducts] = useState([
     {
       Nom: "prod22",
-      Prix: "555",
+      Prix: "556",
       Quantité: "222",
     },
   ]);
